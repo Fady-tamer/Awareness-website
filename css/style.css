@@ -1,0 +1,38 @@
+:root {
+  --main-color: #022c22;
+  --main-color-light: #064e3b;
+  --secondary-color: #bef264;
+  --secondary-hover: #a3e635;
+
+  --card-bg: #03362a;
+  --card-border: rgba(190, 242, 100, 0.15);
+
+  --main-text-dark-color: #022c22;
+  --main-text-light-color: #f8fafc;
+  --secondary-text-color: #94a3b8;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-color);
+  color: var(--main-text-light-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -1,0 +1,117 @@
+#headerContainer {
+  position: relative;
+  height: auto;
+  max-height: 60px;
+  overflow: hidden;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 1px solid var(--secondary-color);
+  background-color: #011d17;
+  transition: max-height 0.35s ease-in-out;
+}
+
+#headerContainer.nav-expanded {
+  max-height: 350px;
+}
+
+.nav-wrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 36px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.mobile-bars {
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mobile-nav {
+  width: 100%;
+  padding-top: 16px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-nav ul li .nav-link {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: var(--main-text-light-color);
+  transition: all 0.2s ease;
+}
+
+.mobile-nav ul li .nav-link.active {
+  color: var(--main-text-dark-color);
+  background-color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Laptop / Desktop */
+.laptop-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #headerContainer {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .mobile-bars,
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .laptop-nav {
+    display: block;
+  }
+
+  .laptop-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .laptop-nav ul li .nav-link {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-text-light-color);
+    transition: all 0.2s ease;
+  }
+
+  .laptop-nav ul li .nav-link:hover {
+    color: var(--secondary-color);
+  }
+
+  .laptop-nav ul li .nav-link.active {
+    color: var(--main-text-dark-color);
+    background-color: var(--secondary-color);
+    font-weight: 600;
+  }
+}

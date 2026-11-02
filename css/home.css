@@ -1,0 +1,185 @@
+/* Hero */
+.hero {
+  padding: 48px 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.img-container {
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--card-border);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.03);
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.hero-meta h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--main-text-light-color);
+}
+
+.hero-meta p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.hero-meta a {
+  align-self: center;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  color: var(--main-text-dark-color);
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}
+
+.hero-meta a:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(190, 242, 100, 0.25);
+}
+
+/* Causes & Content Grid */
+.Causes {
+  max-width: 1140px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.Causes > div > h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.Causes > div > h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--secondary-color);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.Causes div > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.Causes div > ul > li {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.Causes div > ul > li:hover {
+  border-color: rgba(190, 242, 100, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.Causes div ul li h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--main-text-light-color);
+  margin-bottom: 8px;
+}
+
+.Causes div ul li p {
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+}
+
+.Causes div ul li ul {
+  list-style: none;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Causes div ul li ul li {
+  background: rgba(2, 44, 34, 0.5);
+  border-left: 3px solid var(--secondary-color);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.Causes div ul li ul li h3 {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  margin-bottom: 4px;
+}
+
+.Causes div ul li ul li p {
+  font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 80px 20px;
+  }
+
+  .hero-meta {
+    text-align: left;
+    max-width: 520px;
+  }
+
+  .hero-meta a {
+    align-self: flex-start;
+  }
+
+  .img-container {
+    height: 340px;
+  }
+
+  .Causes div > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
